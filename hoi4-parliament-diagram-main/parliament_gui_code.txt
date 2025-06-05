@@ -2,13 +2,13 @@
 ### Insert as a top-level container in your .gui file
 
 containerWindowType = {
-	name = "ISR_knesset_seat_container"
+	name = ""
 	position = { x = 0 y = 0 }
 
 	iconType = { 
-		name = "ISR_knesset_seat"
-		quadTextureSprite = "ISR_knesset_seat_sprite"
-		pdx_tooltip = "sus"
+		name = "parliament_dot_icon"
+		quadTextureSprite = ""
+		
 	}
 }
 
@@ -20,11 +20,11 @@ containerWindowType = {
 # LEAVE THESE COMMENTS IN SO YOU CAN REGENERATE THIS DIAGRAM
 # IF THE SCRIPT IS IMPROVED DOWN THE LINE
 # YOU HAVE BEEN WARNED
-# Spread: 2.2
-# First Row Radius: 2.96
+# Spread: 4.3
+# First Row Radius: 7.04
 # Total Delegates: 120
 gridboxtype = {
-	name = "ISR_knesset_diagram"
+	name = "parliament_diagram"
 	position = { x = 0 y = 0 }
 	size = { width = 100%% height = 100%% }
 	slotsize = { width = 100%% height = 0 }
@@ -37,266 +37,266 @@ gridboxtype = {
 ### Insert into the scripted GUI for the container which holds the parliament_diagram gridboxtype
 
 dynamic_lists = {
-	ISR_knesset_diagram = {
-		array = ISR_knesset_array_x
+	parliament_diagram = {
+		array = ISR_parliament_x_array
 		change_scope = no
-		entry_container = ISR_knesset_seat_container
+		entry_container = 
 		index = seat_idx
 	}
 }
 
 properties = {
-	ISR_knesset_seat = {
-		x = ISR_knesset_array_x^seat_idx
-		y = ISR_knesset_array_y^seat_idx
-		frame = ISR_knesset_arry_frame^seat_idx
+	parliament_dot_icon = {
+		x = ISR_parliament_x_array^seat_idx
+		y = ISR_parliament_y_array^seat_idx
+		frame = ^seat_idx
 	}
 }
 
 
 
 ### Insert into a history file or scripted effect, this sets up all of the seat positions
-### Note that you'll need to fill out ISR_knesset_arry_frame yourself with the proper frames for each seat
-add_to_array = { ISR_knesset_array_x = 0 }
-add_to_array = { ISR_knesset_array_y = 120 }
-add_to_array = { ISR_knesset_array_x = 14 }
-add_to_array = { ISR_knesset_array_y = 120 }
-add_to_array = { ISR_knesset_array_x = 28 }
-add_to_array = { ISR_knesset_array_y = 120 }
-add_to_array = { ISR_knesset_array_x = 41 }
-add_to_array = { ISR_knesset_array_y = 120 }
-add_to_array = { ISR_knesset_array_x = 55 }
-add_to_array = { ISR_knesset_array_y = 120 }
-add_to_array = { ISR_knesset_array_x = 69 }
-add_to_array = { ISR_knesset_array_y = 120 }
-add_to_array = { ISR_knesset_array_x = 2 }
-add_to_array = { ISR_knesset_array_y = 106 }
-add_to_array = { ISR_knesset_array_x = 16 }
-add_to_array = { ISR_knesset_array_y = 106 }
-add_to_array = { ISR_knesset_array_x = 30 }
-add_to_array = { ISR_knesset_array_y = 106 }
-add_to_array = { ISR_knesset_array_x = 44 }
-add_to_array = { ISR_knesset_array_y = 107 }
-add_to_array = { ISR_knesset_array_x = 6 }
-add_to_array = { ISR_knesset_array_y = 92 }
-add_to_array = { ISR_knesset_array_x = 58 }
-add_to_array = { ISR_knesset_array_y = 107 }
-add_to_array = { ISR_knesset_array_x = 20 }
-add_to_array = { ISR_knesset_array_y = 92 }
-add_to_array = { ISR_knesset_array_x = 35 }
-add_to_array = { ISR_knesset_array_y = 92 }
-add_to_array = { ISR_knesset_array_x = 73 }
-add_to_array = { ISR_knesset_array_y = 108 }
-add_to_array = { ISR_knesset_array_x = 11 }
-add_to_array = { ISR_knesset_array_y = 79 }
-add_to_array = { ISR_knesset_array_x = 49 }
-add_to_array = { ISR_knesset_array_y = 94 }
-add_to_array = { ISR_knesset_array_x = 26 }
-add_to_array = { ISR_knesset_array_y = 79 }
-add_to_array = { ISR_knesset_array_x = 64 }
-add_to_array = { ISR_knesset_array_y = 95 }
-add_to_array = { ISR_knesset_array_x = 17 }
-add_to_array = { ISR_knesset_array_y = 66 }
-add_to_array = { ISR_knesset_array_x = 41 }
-add_to_array = { ISR_knesset_array_y = 80 }
-add_to_array = { ISR_knesset_array_x = 56 }
-add_to_array = { ISR_knesset_array_y = 82 }
-add_to_array = { ISR_knesset_array_x = 33 }
-add_to_array = { ISR_knesset_array_y = 67 }
-add_to_array = { ISR_knesset_array_x = 80 }
-add_to_array = { ISR_knesset_array_y = 96 }
-add_to_array = { ISR_knesset_array_x = 25 }
-add_to_array = { ISR_knesset_array_y = 54 }
-add_to_array = { ISR_knesset_array_x = 49 }
-add_to_array = { ISR_knesset_array_y = 68 }
-add_to_array = { ISR_knesset_array_x = 72 }
-add_to_array = { ISR_knesset_array_y = 84 }
-add_to_array = { ISR_knesset_array_x = 42 }
-add_to_array = { ISR_knesset_array_y = 55 }
-add_to_array = { ISR_knesset_array_x = 64 }
-add_to_array = { ISR_knesset_array_y = 72 }
-add_to_array = { ISR_knesset_array_x = 35 }
-add_to_array = { ISR_knesset_array_y = 43 }
-add_to_array = { ISR_knesset_array_x = 59 }
-add_to_array = { ISR_knesset_array_y = 57 }
-add_to_array = { ISR_knesset_array_x = 52 }
-add_to_array = { ISR_knesset_array_y = 45 }
-add_to_array = { ISR_knesset_array_x = 89 }
-add_to_array = { ISR_knesset_array_y = 87 }
-add_to_array = { ISR_knesset_array_x = 45 }
-add_to_array = { ISR_knesset_array_y = 33 }
-add_to_array = { ISR_knesset_array_x = 81 }
-add_to_array = { ISR_knesset_array_y = 75 }
-add_to_array = { ISR_knesset_array_x = 74 }
-add_to_array = { ISR_knesset_array_y = 63 }
-add_to_array = { ISR_knesset_array_x = 71 }
-add_to_array = { ISR_knesset_array_y = 49 }
-add_to_array = { ISR_knesset_array_x = 64 }
-add_to_array = { ISR_knesset_array_y = 37 }
-add_to_array = { ISR_knesset_array_x = 57 }
-add_to_array = { ISR_knesset_array_y = 25 }
-add_to_array = { ISR_knesset_array_x = 86 }
-add_to_array = { ISR_knesset_array_y = 56 }
-add_to_array = { ISR_knesset_array_x = 93 }
-add_to_array = { ISR_knesset_array_y = 67 }
-add_to_array = { ISR_knesset_array_x = 100 }
-add_to_array = { ISR_knesset_array_y = 79 }
-add_to_array = { ISR_knesset_array_x = 70 }
-add_to_array = { ISR_knesset_array_y = 18 }
-add_to_array = { ISR_knesset_array_x = 76 }
-add_to_array = { ISR_knesset_array_y = 30 }
-add_to_array = { ISR_knesset_array_x = 83 }
-add_to_array = { ISR_knesset_array_y = 41 }
-add_to_array = { ISR_knesset_array_x = 83 }
-add_to_array = { ISR_knesset_array_y = 12 }
-add_to_array = { ISR_knesset_array_x = 98 }
-add_to_array = { ISR_knesset_array_y = 50 }
-add_to_array = { ISR_knesset_array_x = 90 }
-add_to_array = { ISR_knesset_array_y = 24 }
-add_to_array = { ISR_knesset_array_x = 97 }
-add_to_array = { ISR_knesset_array_y = 36 }
-add_to_array = { ISR_knesset_array_x = 105 }
-add_to_array = { ISR_knesset_array_y = 62 }
-add_to_array = { ISR_knesset_array_x = 112 }
-add_to_array = { ISR_knesset_array_y = 75 }
-add_to_array = { ISR_knesset_array_x = 97 }
-add_to_array = { ISR_knesset_array_y = 8 }
-add_to_array = { ISR_knesset_array_x = 104 }
-add_to_array = { ISR_knesset_array_y = 20 }
-add_to_array = { ISR_knesset_array_x = 112 }
-add_to_array = { ISR_knesset_array_y = 47 }
-add_to_array = { ISR_knesset_array_x = 111 }
-add_to_array = { ISR_knesset_array_y = 33 }
-add_to_array = { ISR_knesset_array_x = 111 }
-add_to_array = { ISR_knesset_array_y = 5 }
-add_to_array = { ISR_knesset_array_x = 118 }
-add_to_array = { ISR_knesset_array_y = 60 }
-add_to_array = { ISR_knesset_array_x = 118 }
-add_to_array = { ISR_knesset_array_y = 19 }
-add_to_array = { ISR_knesset_array_x = 125 }
-add_to_array = { ISR_knesset_array_y = 73 }
-add_to_array = { ISR_knesset_array_x = 125 }
-add_to_array = { ISR_knesset_array_y = 46 }
-add_to_array = { ISR_knesset_array_x = 125 }
-add_to_array = { ISR_knesset_array_y = 32 }
-add_to_array = { ISR_knesset_array_x = 125 }
-add_to_array = { ISR_knesset_array_y = 5 }
-add_to_array = { ISR_knesset_array_x = 132 }
-add_to_array = { ISR_knesset_array_y = 19 }
-add_to_array = { ISR_knesset_array_x = 132 }
-add_to_array = { ISR_knesset_array_y = 60 }
-add_to_array = { ISR_knesset_array_x = 139 }
-add_to_array = { ISR_knesset_array_y = 5 }
-add_to_array = { ISR_knesset_array_x = 139 }
-add_to_array = { ISR_knesset_array_y = 33 }
-add_to_array = { ISR_knesset_array_x = 139 }
-add_to_array = { ISR_knesset_array_y = 47 }
-add_to_array = { ISR_knesset_array_x = 147 }
-add_to_array = { ISR_knesset_array_y = 20 }
-add_to_array = { ISR_knesset_array_x = 154 }
-add_to_array = { ISR_knesset_array_y = 8 }
-add_to_array = { ISR_knesset_array_x = 138 }
-add_to_array = { ISR_knesset_array_y = 75 }
-add_to_array = { ISR_knesset_array_x = 145 }
-add_to_array = { ISR_knesset_array_y = 62 }
-add_to_array = { ISR_knesset_array_x = 153 }
-add_to_array = { ISR_knesset_array_y = 36 }
-add_to_array = { ISR_knesset_array_x = 160 }
-add_to_array = { ISR_knesset_array_y = 24 }
-add_to_array = { ISR_knesset_array_x = 152 }
-add_to_array = { ISR_knesset_array_y = 50 }
-add_to_array = { ISR_knesset_array_x = 167 }
-add_to_array = { ISR_knesset_array_y = 12 }
-add_to_array = { ISR_knesset_array_x = 167 }
-add_to_array = { ISR_knesset_array_y = 41 }
-add_to_array = { ISR_knesset_array_x = 174 }
-add_to_array = { ISR_knesset_array_y = 30 }
-add_to_array = { ISR_knesset_array_x = 181 }
-add_to_array = { ISR_knesset_array_y = 18 }
-add_to_array = { ISR_knesset_array_x = 151 }
-add_to_array = { ISR_knesset_array_y = 79 }
-add_to_array = { ISR_knesset_array_x = 157 }
-add_to_array = { ISR_knesset_array_y = 67 }
-add_to_array = { ISR_knesset_array_x = 164 }
-add_to_array = { ISR_knesset_array_y = 56 }
-add_to_array = { ISR_knesset_array_x = 193 }
-add_to_array = { ISR_knesset_array_y = 25 }
-add_to_array = { ISR_knesset_array_x = 186 }
-add_to_array = { ISR_knesset_array_y = 37 }
-add_to_array = { ISR_knesset_array_x = 179 }
-add_to_array = { ISR_knesset_array_y = 49 }
-add_to_array = { ISR_knesset_array_x = 176 }
-add_to_array = { ISR_knesset_array_y = 63 }
-add_to_array = { ISR_knesset_array_x = 169 }
-add_to_array = { ISR_knesset_array_y = 75 }
-add_to_array = { ISR_knesset_array_x = 205 }
-add_to_array = { ISR_knesset_array_y = 33 }
-add_to_array = { ISR_knesset_array_x = 162 }
-add_to_array = { ISR_knesset_array_y = 87 }
-add_to_array = { ISR_knesset_array_x = 198 }
-add_to_array = { ISR_knesset_array_y = 45 }
-add_to_array = { ISR_knesset_array_x = 191 }
-add_to_array = { ISR_knesset_array_y = 57 }
-add_to_array = { ISR_knesset_array_x = 215 }
-add_to_array = { ISR_knesset_array_y = 43 }
-add_to_array = { ISR_knesset_array_x = 186 }
-add_to_array = { ISR_knesset_array_y = 72 }
-add_to_array = { ISR_knesset_array_x = 208 }
-add_to_array = { ISR_knesset_array_y = 55 }
-add_to_array = { ISR_knesset_array_x = 178 }
-add_to_array = { ISR_knesset_array_y = 84 }
-add_to_array = { ISR_knesset_array_x = 201 }
-add_to_array = { ISR_knesset_array_y = 68 }
-add_to_array = { ISR_knesset_array_x = 225 }
-add_to_array = { ISR_knesset_array_y = 54 }
-add_to_array = { ISR_knesset_array_x = 171 }
-add_to_array = { ISR_knesset_array_y = 96 }
-add_to_array = { ISR_knesset_array_x = 217 }
-add_to_array = { ISR_knesset_array_y = 67 }
-add_to_array = { ISR_knesset_array_x = 195 }
-add_to_array = { ISR_knesset_array_y = 82 }
-add_to_array = { ISR_knesset_array_x = 209 }
-add_to_array = { ISR_knesset_array_y = 80 }
-add_to_array = { ISR_knesset_array_x = 233 }
-add_to_array = { ISR_knesset_array_y = 66 }
-add_to_array = { ISR_knesset_array_x = 186 }
-add_to_array = { ISR_knesset_array_y = 95 }
-add_to_array = { ISR_knesset_array_x = 224 }
-add_to_array = { ISR_knesset_array_y = 79 }
-add_to_array = { ISR_knesset_array_x = 201 }
-add_to_array = { ISR_knesset_array_y = 94 }
-add_to_array = { ISR_knesset_array_x = 240 }
-add_to_array = { ISR_knesset_array_y = 79 }
-add_to_array = { ISR_knesset_array_x = 177 }
-add_to_array = { ISR_knesset_array_y = 108 }
-add_to_array = { ISR_knesset_array_x = 216 }
-add_to_array = { ISR_knesset_array_y = 92 }
-add_to_array = { ISR_knesset_array_x = 230 }
-add_to_array = { ISR_knesset_array_y = 92 }
-add_to_array = { ISR_knesset_array_x = 192 }
-add_to_array = { ISR_knesset_array_y = 107 }
-add_to_array = { ISR_knesset_array_x = 245 }
-add_to_array = { ISR_knesset_array_y = 92 }
-add_to_array = { ISR_knesset_array_x = 206 }
-add_to_array = { ISR_knesset_array_y = 107 }
-add_to_array = { ISR_knesset_array_x = 220 }
-add_to_array = { ISR_knesset_array_y = 106 }
-add_to_array = { ISR_knesset_array_x = 234 }
-add_to_array = { ISR_knesset_array_y = 106 }
-add_to_array = { ISR_knesset_array_x = 248 }
-add_to_array = { ISR_knesset_array_y = 106 }
-add_to_array = { ISR_knesset_array_x = 181 }
-add_to_array = { ISR_knesset_array_y = 120 }
-add_to_array = { ISR_knesset_array_x = 195 }
-add_to_array = { ISR_knesset_array_y = 120 }
-add_to_array = { ISR_knesset_array_x = 209 }
-add_to_array = { ISR_knesset_array_y = 120 }
-add_to_array = { ISR_knesset_array_x = 223 }
-add_to_array = { ISR_knesset_array_y = 120 }
-add_to_array = { ISR_knesset_array_x = 236 }
-add_to_array = { ISR_knesset_array_y = 120 }
-add_to_array = { ISR_knesset_array_x = 250 }
-add_to_array = { ISR_knesset_array_y = 120 }
+### Note that you'll need to fill out  yourself with the proper frames for each seat
+add_to_array = { ISR_parliament_x_array = 0 }
+add_to_array = { ISR_parliament_y_array = 275 }
+add_to_array = { ISR_parliament_x_array = 27 }
+add_to_array = { ISR_parliament_y_array = 275 }
+add_to_array = { ISR_parliament_x_array = 54 }
+add_to_array = { ISR_parliament_y_array = 275 }
+add_to_array = { ISR_parliament_x_array = 81 }
+add_to_array = { ISR_parliament_y_array = 275 }
+add_to_array = { ISR_parliament_x_array = 108 }
+add_to_array = { ISR_parliament_y_array = 275 }
+add_to_array = { ISR_parliament_x_array = 135 }
+add_to_array = { ISR_parliament_y_array = 275 }
+add_to_array = { ISR_parliament_x_array = 3 }
+add_to_array = { ISR_parliament_y_array = 242 }
+add_to_array = { ISR_parliament_x_array = 30 }
+add_to_array = { ISR_parliament_y_array = 242 }
+add_to_array = { ISR_parliament_x_array = 58 }
+add_to_array = { ISR_parliament_y_array = 241 }
+add_to_array = { ISR_parliament_x_array = 85 }
+add_to_array = { ISR_parliament_y_array = 242 }
+add_to_array = { ISR_parliament_x_array = 113 }
+add_to_array = { ISR_parliament_y_array = 241 }
+add_to_array = { ISR_parliament_x_array = 10 }
+add_to_array = { ISR_parliament_y_array = 210 }
+add_to_array = { ISR_parliament_x_array = 38 }
+add_to_array = { ISR_parliament_y_array = 209 }
+add_to_array = { ISR_parliament_x_array = 142 }
+add_to_array = { ISR_parliament_y_array = 239 }
+add_to_array = { ISR_parliament_x_array = 67 }
+add_to_array = { ISR_parliament_y_array = 208 }
+add_to_array = { ISR_parliament_x_array = 95 }
+add_to_array = { ISR_parliament_y_array = 210 }
+add_to_array = { ISR_parliament_x_array = 21 }
+add_to_array = { ISR_parliament_y_array = 179 }
+add_to_array = { ISR_parliament_x_array = 51 }
+add_to_array = { ISR_parliament_y_array = 177 }
+add_to_array = { ISR_parliament_x_array = 125 }
+add_to_array = { ISR_parliament_y_array = 208 }
+add_to_array = { ISR_parliament_x_array = 82 }
+add_to_array = { ISR_parliament_y_array = 176 }
+add_to_array = { ISR_parliament_x_array = 35 }
+add_to_array = { ISR_parliament_y_array = 149 }
+add_to_array = { ISR_parliament_x_array = 111 }
+add_to_array = { ISR_parliament_y_array = 179 }
+add_to_array = { ISR_parliament_x_array = 157 }
+add_to_array = { ISR_parliament_y_array = 206 }
+add_to_array = { ISR_parliament_x_array = 67 }
+add_to_array = { ISR_parliament_y_array = 148 }
+add_to_array = { ISR_parliament_x_array = 53 }
+add_to_array = { ISR_parliament_y_array = 121 }
+add_to_array = { ISR_parliament_x_array = 101 }
+add_to_array = { ISR_parliament_y_array = 147 }
+add_to_array = { ISR_parliament_x_array = 144 }
+add_to_array = { ISR_parliament_y_array = 179 }
+add_to_array = { ISR_parliament_x_array = 87 }
+add_to_array = { ISR_parliament_y_array = 121 }
+add_to_array = { ISR_parliament_x_array = 131 }
+add_to_array = { ISR_parliament_y_array = 152 }
+add_to_array = { ISR_parliament_x_array = 74 }
+add_to_array = { ISR_parliament_y_array = 95 }
+add_to_array = { ISR_parliament_x_array = 124 }
+add_to_array = { ISR_parliament_y_array = 121 }
+add_to_array = { ISR_parliament_x_array = 181 }
+add_to_array = { ISR_parliament_y_array = 178 }
+add_to_array = { ISR_parliament_x_array = 111 }
+add_to_array = { ISR_parliament_y_array = 96 }
+add_to_array = { ISR_parliament_x_array = 98 }
+add_to_array = { ISR_parliament_y_array = 72 }
+add_to_array = { ISR_parliament_x_array = 168 }
+add_to_array = { ISR_parliament_y_array = 153 }
+add_to_array = { ISR_parliament_x_array = 155 }
+add_to_array = { ISR_parliament_y_array = 129 }
+add_to_array = { ISR_parliament_x_array = 150 }
+add_to_array = { ISR_parliament_y_array = 99 }
+add_to_array = { ISR_parliament_x_array = 137 }
+add_to_array = { ISR_parliament_y_array = 76 }
+add_to_array = { ISR_parliament_x_array = 124 }
+add_to_array = { ISR_parliament_y_array = 52 }
+add_to_array = { ISR_parliament_x_array = 183 }
+add_to_array = { ISR_parliament_y_array = 110 }
+add_to_array = { ISR_parliament_x_array = 197 }
+add_to_array = { ISR_parliament_y_array = 134 }
+add_to_array = { ISR_parliament_x_array = 210 }
+add_to_array = { ISR_parliament_y_array = 157 }
+add_to_array = { ISR_parliament_x_array = 153 }
+add_to_array = { ISR_parliament_y_array = 35 }
+add_to_array = { ISR_parliament_x_array = 166 }
+add_to_array = { ISR_parliament_y_array = 58 }
+add_to_array = { ISR_parliament_x_array = 180 }
+add_to_array = { ISR_parliament_y_array = 82 }
+add_to_array = { ISR_parliament_x_array = 183 }
+add_to_array = { ISR_parliament_y_array = 22 }
+add_to_array = { ISR_parliament_x_array = 214 }
+add_to_array = { ISR_parliament_y_array = 96 }
+add_to_array = { ISR_parliament_x_array = 198 }
+add_to_array = { ISR_parliament_y_array = 45 }
+add_to_array = { ISR_parliament_x_array = 212 }
+add_to_array = { ISR_parliament_y_array = 69 }
+add_to_array = { ISR_parliament_x_array = 229 }
+add_to_array = { ISR_parliament_y_array = 120 }
+add_to_array = { ISR_parliament_x_array = 244 }
+add_to_array = { ISR_parliament_y_array = 143 }
+add_to_array = { ISR_parliament_x_array = 215 }
+add_to_array = { ISR_parliament_y_array = 12 }
+add_to_array = { ISR_parliament_x_array = 230 }
+add_to_array = { ISR_parliament_y_array = 36 }
+add_to_array = { ISR_parliament_x_array = 247 }
+add_to_array = { ISR_parliament_y_array = 88 }
+add_to_array = { ISR_parliament_x_array = 246 }
+add_to_array = { ISR_parliament_y_array = 61 }
+add_to_array = { ISR_parliament_x_array = 247 }
+add_to_array = { ISR_parliament_y_array = 6 }
+add_to_array = { ISR_parliament_x_array = 263 }
+add_to_array = { ISR_parliament_y_array = 113 }
+add_to_array = { ISR_parliament_x_array = 264 }
+add_to_array = { ISR_parliament_y_array = 32 }
+add_to_array = { ISR_parliament_x_array = 281 }
+add_to_array = { ISR_parliament_y_array = 139 }
+add_to_array = { ISR_parliament_x_array = 281 }
+add_to_array = { ISR_parliament_y_array = 85 }
+add_to_array = { ISR_parliament_x_array = 281 }
+add_to_array = { ISR_parliament_y_array = 58 }
+add_to_array = { ISR_parliament_x_array = 281 }
+add_to_array = { ISR_parliament_y_array = 5 }
+add_to_array = { ISR_parliament_x_array = 297 }
+add_to_array = { ISR_parliament_y_array = 32 }
+add_to_array = { ISR_parliament_x_array = 298 }
+add_to_array = { ISR_parliament_y_array = 113 }
+add_to_array = { ISR_parliament_x_array = 314 }
+add_to_array = { ISR_parliament_y_array = 6 }
+add_to_array = { ISR_parliament_x_array = 315 }
+add_to_array = { ISR_parliament_y_array = 61 }
+add_to_array = { ISR_parliament_x_array = 314 }
+add_to_array = { ISR_parliament_y_array = 88 }
+add_to_array = { ISR_parliament_x_array = 331 }
+add_to_array = { ISR_parliament_y_array = 36 }
+add_to_array = { ISR_parliament_x_array = 346 }
+add_to_array = { ISR_parliament_y_array = 12 }
+add_to_array = { ISR_parliament_x_array = 317 }
+add_to_array = { ISR_parliament_y_array = 143 }
+add_to_array = { ISR_parliament_x_array = 332 }
+add_to_array = { ISR_parliament_y_array = 120 }
+add_to_array = { ISR_parliament_x_array = 349 }
+add_to_array = { ISR_parliament_y_array = 69 }
+add_to_array = { ISR_parliament_x_array = 364 }
+add_to_array = { ISR_parliament_y_array = 45 }
+add_to_array = { ISR_parliament_x_array = 347 }
+add_to_array = { ISR_parliament_y_array = 96 }
+add_to_array = { ISR_parliament_x_array = 378 }
+add_to_array = { ISR_parliament_y_array = 22 }
+add_to_array = { ISR_parliament_x_array = 381 }
+add_to_array = { ISR_parliament_y_array = 82 }
+add_to_array = { ISR_parliament_x_array = 395 }
+add_to_array = { ISR_parliament_y_array = 58 }
+add_to_array = { ISR_parliament_x_array = 408 }
+add_to_array = { ISR_parliament_y_array = 35 }
+add_to_array = { ISR_parliament_x_array = 351 }
+add_to_array = { ISR_parliament_y_array = 157 }
+add_to_array = { ISR_parliament_x_array = 364 }
+add_to_array = { ISR_parliament_y_array = 134 }
+add_to_array = { ISR_parliament_x_array = 378 }
+add_to_array = { ISR_parliament_y_array = 110 }
+add_to_array = { ISR_parliament_x_array = 437 }
+add_to_array = { ISR_parliament_y_array = 52 }
+add_to_array = { ISR_parliament_x_array = 424 }
+add_to_array = { ISR_parliament_y_array = 76 }
+add_to_array = { ISR_parliament_x_array = 411 }
+add_to_array = { ISR_parliament_y_array = 99 }
+add_to_array = { ISR_parliament_x_array = 406 }
+add_to_array = { ISR_parliament_y_array = 129 }
+add_to_array = { ISR_parliament_x_array = 393 }
+add_to_array = { ISR_parliament_y_array = 153 }
+add_to_array = { ISR_parliament_x_array = 463 }
+add_to_array = { ISR_parliament_y_array = 72 }
+add_to_array = { ISR_parliament_x_array = 450 }
+add_to_array = { ISR_parliament_y_array = 96 }
+add_to_array = { ISR_parliament_x_array = 380 }
+add_to_array = { ISR_parliament_y_array = 178 }
+add_to_array = { ISR_parliament_x_array = 438 }
+add_to_array = { ISR_parliament_y_array = 121 }
+add_to_array = { ISR_parliament_x_array = 487 }
+add_to_array = { ISR_parliament_y_array = 95 }
+add_to_array = { ISR_parliament_x_array = 430 }
+add_to_array = { ISR_parliament_y_array = 152 }
+add_to_array = { ISR_parliament_x_array = 474 }
+add_to_array = { ISR_parliament_y_array = 121 }
+add_to_array = { ISR_parliament_x_array = 417 }
+add_to_array = { ISR_parliament_y_array = 179 }
+add_to_array = { ISR_parliament_x_array = 461 }
+add_to_array = { ISR_parliament_y_array = 147 }
+add_to_array = { ISR_parliament_x_array = 508 }
+add_to_array = { ISR_parliament_y_array = 121 }
+add_to_array = { ISR_parliament_x_array = 494 }
+add_to_array = { ISR_parliament_y_array = 148 }
+add_to_array = { ISR_parliament_x_array = 404 }
+add_to_array = { ISR_parliament_y_array = 206 }
+add_to_array = { ISR_parliament_x_array = 450 }
+add_to_array = { ISR_parliament_y_array = 179 }
+add_to_array = { ISR_parliament_x_array = 526 }
+add_to_array = { ISR_parliament_y_array = 149 }
+add_to_array = { ISR_parliament_x_array = 480 }
+add_to_array = { ISR_parliament_y_array = 176 }
+add_to_array = { ISR_parliament_x_array = 436 }
+add_to_array = { ISR_parliament_y_array = 208 }
+add_to_array = { ISR_parliament_x_array = 510 }
+add_to_array = { ISR_parliament_y_array = 177 }
+add_to_array = { ISR_parliament_x_array = 540 }
+add_to_array = { ISR_parliament_y_array = 179 }
+add_to_array = { ISR_parliament_x_array = 466 }
+add_to_array = { ISR_parliament_y_array = 210 }
+add_to_array = { ISR_parliament_x_array = 494 }
+add_to_array = { ISR_parliament_y_array = 208 }
+add_to_array = { ISR_parliament_x_array = 420 }
+add_to_array = { ISR_parliament_y_array = 239 }
+add_to_array = { ISR_parliament_x_array = 523 }
+add_to_array = { ISR_parliament_y_array = 209 }
+add_to_array = { ISR_parliament_x_array = 551 }
+add_to_array = { ISR_parliament_y_array = 210 }
+add_to_array = { ISR_parliament_x_array = 448 }
+add_to_array = { ISR_parliament_y_array = 241 }
+add_to_array = { ISR_parliament_x_array = 476 }
+add_to_array = { ISR_parliament_y_array = 242 }
+add_to_array = { ISR_parliament_x_array = 503 }
+add_to_array = { ISR_parliament_y_array = 241 }
+add_to_array = { ISR_parliament_x_array = 531 }
+add_to_array = { ISR_parliament_y_array = 242 }
+add_to_array = { ISR_parliament_x_array = 558 }
+add_to_array = { ISR_parliament_y_array = 242 }
+add_to_array = { ISR_parliament_x_array = 427 }
+add_to_array = { ISR_parliament_y_array = 275 }
+add_to_array = { ISR_parliament_x_array = 454 }
+add_to_array = { ISR_parliament_y_array = 275 }
+add_to_array = { ISR_parliament_x_array = 480 }
+add_to_array = { ISR_parliament_y_array = 275 }
+add_to_array = { ISR_parliament_x_array = 507 }
+add_to_array = { ISR_parliament_y_array = 275 }
+add_to_array = { ISR_parliament_x_array = 534 }
+add_to_array = { ISR_parliament_y_array = 275 }
+add_to_array = { ISR_parliament_x_array = 561 }
+add_to_array = { ISR_parliament_y_array = 275 }
 
 
 
